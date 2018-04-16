@@ -4,8 +4,7 @@
     ],
     "rules": {
         "array-bracket-spacing":  true, // space on the square brackets
-        "space-within-parens": [true, 1],
-        // "space-in-parens": ["error", "always"],
+        "space-within-parens": [true, 1], // force one sapce on parens
         "class-name": true,
         "comment-format": [
             true,
