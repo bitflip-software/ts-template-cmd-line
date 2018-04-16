@@ -10,6 +10,6 @@ import { Response, Request, NextFunction } from "express";
  * List of API examples.
  */
 export const index = (req: Request, res: Response) => {
-	res.status(200).json({success: true, message: "get the api messaga"});
+	res.status(200).json({success: true, message: "get the api message again"});
 	return;
 };

@@ -9,14 +9,11 @@
   "author": "Roberto Sousa <beto.sousa22@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "npm run serve",
-    "build": "npm run build-ts && npm run tslint",
-    "develop": "nodemon --inspect dist/server.js",
-    "serve": "node dist/server.js",
-    "watch-node": "nodemon dist/server.js",
+    "start": "node dist/server.js",
+    "build": "tsc && npm run tslint",
+    "compile": "tsc && npm run tslint && npm run start",
+    "develop": "nodemon -e ts --exec \"npm run compile\"",
     "test": "jest --forceExit --coverage --verbose",
-    "build-ts": "tsc",
-    "watch-ts": "tsc -w",
     "tslint": "tslint -c tslint.json -p tsconfig.json"
   },
   "dependencies": {
