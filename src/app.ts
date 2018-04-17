@@ -9,7 +9,7 @@ import bluebird from "bluebird";
 
 
 // Load environment variables from .env file, where API keys and passwords are configured
-dotenv.config({ path: ".env.example" });
+dotenv.config( { path: ".env.example" } );
 
 
 
@@ -18,23 +18,24 @@ const app = express();
 
 
 // Express configuration
-app.set("port", process.env.PORT || 3000);
+app.set( "port", process.env.PORT || 3000 );
 
 // compress all the responses
-app.use(compression());
+app.use( compression() );
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(expressValidator());
+app.use( bodyParser.json() );
+app.use( bodyParser.urlencoded( { extended: true } ) );
+app.use( expressValidator() );
 
 /**
  * Primary app routes.
  */
 
-import APIRoutes = require("./controllers/api/api-routes");
+import APIRoutes = require( "./controllers/api/api-routes" );
+// import UserRoutes = require( "./controllers/user/user-routes.js" );
 
 
-app.use("/", APIRoutes.Routes.index());
+app.use( "/", APIRoutes.Routes.index() );
 
 
 export default app;
