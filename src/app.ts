@@ -32,10 +32,11 @@ app.use( expressValidator() );
  */
 
 import APIRoutes = require( "./controllers/api/api-routes" );
-// import UserRoutes = require( "./controllers/user/user-routes.js" );
+import UserRoutes = require( "./controllers/user/user-routes" );
 
 
-app.use( "/", APIRoutes.Routes.index() );
+app.use( "/api", APIRoutes.Routes.index() );
+app.use( "/user", UserRoutes.Routes.index() );
 
 
 export default app;

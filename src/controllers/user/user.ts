@@ -4,10 +4,10 @@ import { Response, Request, NextFunction } from "express";
 
 
 /**
- * GET /api
+ * GET /user
  * List of API examples.
  */
 export const index = ( req : Request, res : Response ) => {
-	res.status( 200 ).json( { success: true, message: "get the api message" } );
+	res.status( 200 ).json( { success: true, message: "get the user" } );
 	return;
 };
